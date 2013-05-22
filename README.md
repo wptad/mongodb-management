@@ -1,3 +1,24 @@
+
+## Balancer
+
+* balancer status
+
+```
+sh.getBalancerState()
+```
+
+* start balancer
+
+```
+sh.startBalancer()
+```
+
+* stop balancer
+
+```
+sh.stopBalancer()
+```
+
 ##Add Shard Server
 
 ```

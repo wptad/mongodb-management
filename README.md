@@ -1,4 +1,44 @@
 
+##Configure
+
+### config
+sharding_config.conf
+
+```
+configsvr = true
+dbpath=/etc/mongodb/config_db
+logpath=/var/log/mongodb/mongodb_config.log
+logappend=true
+port = 9211
+```
+
+* sharding_route.conf
+
+
+```
+logpath = /var/log/mongodb/mongodb_route_1.log
+logappend = true
+configdb = 127.0.0.1:9211
+port = 9200
+```
+
+* sharding_1.conf
+
+```
+shardsvr = true
+dbpath=/hdd1/mongodb_shard
+logpath=/var/log/mongodb/mongodb_shard_1.log
+logappend=true
+port = 9201
+# tuning configuration
+objcheck = false
+journal = false
+nojournal = true
+nohttpinterface = true
+```
+
+
+
 ## Balancer
 
 * balancer status

@@ -68,13 +68,13 @@ sh.stopBalancer()
 ##Add Shard Server
 
 ```
-db.runCommand({ addshard:"localhost:20000" })
+db.runCommand({ addshard:"localhost:9201" })
 ￼{ "shardAdded" : "shard0000", "ok" : 1 }
-> db.runCommand({ addshard:"localhost:20001" })
+> db.runCommand({ addshard:"localhost:9202" })
 { "shardAdded" : "shard0001", "ok" : 1 }
 > db.runCommand({ enablesharding:"test" })
 { "ok" : 1 }
-> db.runCommand({ shardcollection: "test.users", key: { _id:1 }}) --设置分片的集合名称,且必 须指定 Shard Key,系统会自动创建索引
+> db.runCommand({ shardcollection: "test.main", key: { _id:1 }}) --设置分片的集合名称,且必 须指定 Shard Key,系统会自动创建索引
 { "collectionsharded" : "test.users", "ok" : 1 }
 
 ```
@@ -92,3 +92,9 @@ switched to db test
 ```
 db.runCommand({"removeshard" : "localhost:9203"});
 ``` 
+
+
+
+##ulimit 
+
+Reference: <http://docs.mongodb.org/manual/reference/ulimit/>

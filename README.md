@@ -1,4 +1,10 @@
 
+#Install
+
+## Debian
+
+* <http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/>
+
 #Sharding
 
 

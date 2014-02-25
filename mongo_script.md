@@ -1,5 +1,15 @@
 #Mongo Script
 
+## Import & export databse
+
+* Import
+
+```
+mongoexport -d dbname -c collectionName /tmp/db.dat 
+mongoimport -d dbname -c collectionName /tmp/db.dat 
+```
+
+
 ##Run js script 
 
 ```

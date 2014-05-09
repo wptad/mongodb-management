@@ -55,7 +55,7 @@ mongoexport -d test -c students -o students.dat
 mongoexport -d test -c students --csv -f classid,name,age -o students_csv.dat  
 ```
 
-
+* reference <http://chenzhou123520.iteye.com/blog/1641319>
 
 ##Run js script 
 

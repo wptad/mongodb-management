@@ -101,6 +101,13 @@ db.runCommand({"removeshard" : "localhost:9203"});
 
 
 
+
+
 ##ulimit 
 
 Reference: <http://docs.mongodb.org/manual/reference/ulimit/>
+
+
+## refer to sharding
+
+<http://docs.mongodb.org/manual/tutorial/deploy-shard-cluster/>

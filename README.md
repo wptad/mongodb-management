@@ -111,3 +111,21 @@ Reference: <http://docs.mongodb.org/manual/reference/ulimit/>
 ## refer to sharding
 
 <http://docs.mongodb.org/manual/tutorial/deploy-shard-cluster/>
+
+## add shard
+
+```
+sh.addShard("10.10.4.5:27011")
+sh.enableSharding("lexicon")
+sh.shardCollection("lexicon.main",{"_id":1})
+
+```
+
+## remove shard
+
+```
+
+use admin
+db.runCommand( { removeShard: "mongodb0" } )
+
+```

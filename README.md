@@ -129,3 +129,13 @@ use admin
 db.runCommand( { removeShard: "mongodb0" } )
 
 ```
+
+## stop removing
+
+* in mongos
+
+```
+use config
+db.shards.update({},{$unset:{draining:true}}, false, true)
+
+```

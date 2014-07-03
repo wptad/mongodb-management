@@ -126,7 +126,7 @@ sh.shardCollection("lexicon.main",{"_id":1})
 ```
 
 use admin
-db.runCommand( { removeShard: "mongodb0" } )
+db.runCommand( { removeShard: "shard0001" } )
 
 ```
 
@@ -139,3 +139,13 @@ use config
 db.shards.update({},{$unset:{draining:true}}, false, true)
 
 ```
+
+## move primary shard
+
+```
+use admin
+{ movePrimary : "test", to : "shard0001" }
+
+```
+
+* <http://docs.mongodb.org/manual/reference/command/movePrimary/>

@@ -1,7 +1,7 @@
 # driver-nodejs
 
 
-## mongoskin
+## replica set with mongoskin
 
 ```
 var mongoskin = require('mongoskin'),
@@ -37,3 +37,8 @@ setInterval(function(){
 }, 10)
 
 ```
+
+
+## replica set with native driver
+
+* <http://mongodb.github.io/node-mongodb-native/driver-articles/mongoclient.html#the-url-connection-format>

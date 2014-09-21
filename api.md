@@ -1,5 +1,20 @@
 # api
 
+## setOnInsert
+
+```
+db.collection.update(
+   <query>,
+   { $setOnInsert: { <field1>: <value1>, ... } },
+   { upsert: true }
+)
+
+```
+
+* <http://docs.mongodb.org/manual/reference/operator/update/setOnInsert/>
+
+
+
 ## collection
 
 * <http://mongodb.github.io/node-mongodb-native/api-generated/collection.html>

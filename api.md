@@ -14,6 +14,14 @@ db.collection.update(
 * <http://docs.mongodb.org/manual/reference/operator/update/setOnInsert/>
 
 
+## rename the key
+
+```
+db.students.update( { _id: 1 }, { $rename: { "nmae": "name" } } )
+db.students.update( { _id: 1 }, { $rename: { "name.first": "name.fname" } } )
+
+```
+
 
 ## collection
 

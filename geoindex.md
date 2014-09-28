@@ -5,6 +5,7 @@
 * <http://blog.nosqlfan.com/html/1811.html>
 * <http://blog.csdn.net/huangrunqing/article/details/9112227>
 * <http://www.l99.com/EditText_view.action?textId=522445>
+* <http://docs.mongodb.org/manual/reference/operator/query/geoIntersects/>
 
 ## 坐标拾取系统
 
@@ -22,7 +23,7 @@
 ```
 db.mapinfo.ensureIndex({"loc" : "2d"},{"background" : true})
 db.mapinfo.ensureIndex({"loc" : "2d","category" : 1})                                                        
-db.mapinfo.ensureIndex({ loc : "2d" } , { min : -500 , max : 500 } )  
+db.mapinfo.ensureIndex({ loc : "2dSphere" } , { min : -500 , max : 500 } )  
 
 
 ```
@@ -36,6 +37,7 @@ db.mapinfo.find({loc : {$geoNear : [72,82]},"category" : "coffee"})
 db.mapinfo.find({"loc" : {"$geoNear" : [50,50]},"category" : "shop"}).limit(5)
 db.mapinfo.find({"loc" : {"$geoNear" : [50,50], "$maxDistance" : 37},"category" : "shop"})
 db.mapinfo.find({"loc" : {"$geoWithin" : {"$center" : [center,radius]}}})
+db.mapinfo.find({"loc" : {"$geoIntersects" : {"$center" : [center,radius]}}})
 db.mapinfo.find({"loc" : {"$geoWithin" : {"$box" : box}}})
 
 ```
